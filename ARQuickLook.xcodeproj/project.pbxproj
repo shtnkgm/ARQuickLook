@@ -12,7 +12,28 @@
 		DA2D3AE820F627F6003E48CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AE620F627F6003E48CF /* Main.storyboard */; };
 		DA2D3AEA20F627F9003E48CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AE920F627F9003E48CF /* Assets.xcassets */; };
 		DA2D3AED20F627F9003E48CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AEB20F627F9003E48CF /* LaunchScreen.storyboard */; };
+		DA2D3AFA20F6294E003E48CF /* ActionClosurable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */; };
+		DA2D3AFB20F6294E003E48CF /* ActionClosurable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA2D3AFC20F6294E003E48CF /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF720F6292B003E48CF /* PureLayout.framework */; };
+		DA2D3AFD20F6294E003E48CF /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF720F6292B003E48CF /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA2D3B0020F62D7A003E48CF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */; };
+		DA2D3B0220F6312C003E48CF /* cupandsaucer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA2D3AFE20F6294F003E48CF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA2D3AFD20F6294E003E48CF /* PureLayout.framework in Embed Frameworks */,
+				DA2D3AFB20F6294E003E48CF /* ActionClosurable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DA2D3ADF20F627F6003E48CF /* ARQuickLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARQuickLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +43,10 @@
 		DA2D3AE920F627F9003E48CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA2D3AEC20F627F9003E48CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA2D3AEE20F627F9003E48CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionClosurable.framework; path = Carthage/Build/iOS/ActionClosurable.framework; sourceTree = "<group>"; };
+		DA2D3AF720F6292B003E48CF /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
+		DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = cupandsaucer.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2D3AFC20F6294E003E48CF /* PureLayout.framework in Frameworks */,
+				DA2D3AFA20F6294E003E48CF /* ActionClosurable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +67,7 @@
 			children = (
 				DA2D3AE120F627F6003E48CF /* ARQuickLook */,
 				DA2D3AE020F627F6003E48CF /* Products */,
+				DA2D3AF520F6292B003E48CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +84,23 @@
 			children = (
 				DA2D3AE220F627F6003E48CF /* AppDelegate.swift */,
 				DA2D3AE420F627F6003E48CF /* ViewController.swift */,
+				DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */,
+				DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */,
 				DA2D3AE620F627F6003E48CF /* Main.storyboard */,
 				DA2D3AE920F627F9003E48CF /* Assets.xcassets */,
 				DA2D3AEB20F627F9003E48CF /* LaunchScreen.storyboard */,
 				DA2D3AEE20F627F9003E48CF /* Info.plist */,
 			);
 			path = ARQuickLook;
+			sourceTree = "<group>";
+		};
+		DA2D3AF520F6292B003E48CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */,
+				DA2D3AF720F6292B003E48CF /* PureLayout.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +113,8 @@
 				DA2D3ADB20F627F6003E48CF /* Sources */,
 				DA2D3ADC20F627F6003E48CF /* Frameworks */,
 				DA2D3ADD20F627F6003E48CF /* Resources */,
+				DA2D3AF420F628CE003E48CF /* Carthage */,
+				DA2D3AFE20F6294F003E48CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,10 +166,34 @@
 				DA2D3AED20F627F9003E48CF /* LaunchScreen.storyboard in Resources */,
 				DA2D3AEA20F627F9003E48CF /* Assets.xcassets in Resources */,
 				DA2D3AE820F627F6003E48CF /* Main.storyboard in Resources */,
+				DA2D3B0220F6312C003E48CF /* cupandsaucer.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA2D3AF420F628CE003E48CF /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PureLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ActionClosurable.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA2D3ADB20F627F6003E48CF /* Sources */ = {
@@ -136,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2D3AE520F627F6003E48CF /* ViewController.swift in Sources */,
+				DA2D3B0020F62D7A003E48CF /* WebViewController.swift in Sources */,
 				DA2D3AE320F627F6003E48CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +348,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82CBYXKLLQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ARQuickLook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +370,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82CBYXKLLQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ARQuickLook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

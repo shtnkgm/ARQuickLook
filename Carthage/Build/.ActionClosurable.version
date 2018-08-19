@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.2.0",
+  "iOS" : [
+    {
+      "name" : "ActionClosurable",
+      "hash" : "cce4174a024029ab7e492dd0da072b804a12a18d13d7d311ed28d505b63ccf4a"
+    }
+  ]
+}
