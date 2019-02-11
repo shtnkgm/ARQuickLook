@@ -12,7 +12,8 @@ import QuickLook
 import Former
 
 class ListViewController: UIViewController {
-    let urlString = "https://developer.apple.com/arkit/gallery/models/teapot/teapot.usdz"
+    private let galleryUrlString = "https://developer.apple.com/arkit/gallery/"
+    private let usdzUrlString = "https://developer.apple.com/arkit/gallery/models/teapot/teapot.usdz"
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private lazy var former = Former(tableView: tableView)
     
@@ -46,17 +47,19 @@ class ListViewController: UIViewController {
     }
     
     func openInSafari() {
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: galleryUrlString) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     func openInNative() {
-        let vc = ARNativeViewController()
+        guard let url = Bundle.main.url(forResource: "cupandsaucer", withExtension: "usdz") else { return }
+        let vc = ARNativeViewController(url: url)
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func openInWebView() {
-        let vc = WebViewController()
+        guard let url = URL(string: galleryUrlString) else { return }
+        let vc = WebViewController(url: url)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
