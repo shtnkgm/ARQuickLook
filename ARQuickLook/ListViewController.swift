@@ -28,21 +28,21 @@ class ListViewController: UIViewController {
     
     func setUpFormer() {
         let section = SectionFormer(rowFormers: [
-            MyFormer.makeLabelRow(title: "Native (Local File)") { [weak self] in
+            MyFormer.makeLabelRow(title: "Native Quick Look (Local File)") { [weak self] in
                 guard let self = self else { return }
                 self.openInNative(url: self.localUSDZURL)
             },
-            MyFormer.makeLabelRow(title: "Native (Web File)") { [weak self] in
+            MyFormer.makeLabelRow(title: "Native Quick Look (Web File)") { [weak self] in
                 guard let self = self else { return }
                 self.openInNativeWithWebFile(url: self.usdzUrl)
             },
-            MyFormer.makeLabelRow(title: "WebView (Gallery)") { [weak self] in
+            MyFormer.makeLabelRow(title: "WKWebView (Gallery)") { [weak self] in
                 guard let self = self else { return }
-                self.openInWebView(url: self.galleryUrl)
+                self.openInWKWebView(url: self.galleryUrl)
             },
-            MyFormer.makeLabelRow(title: "WebView (usdz)") { [weak self] in
+            MyFormer.makeLabelRow(title: "WKWebView (usdz)") { [weak self] in
                 guard let self = self else { return }
-                self.openInWebView(url: self.usdzUrl)
+                self.openInWKWebView(url: self.usdzUrl)
             },
             MyFormer.makeLabelRow(title: "Safari (Gallery)") { [weak self] in
                 guard let self = self else { return }
@@ -101,8 +101,8 @@ class ListViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func openInWebView(url: URL) {
-        let vc = WebViewController(url: url)
+    func openInWKWebView(url: URL) {
+        let vc = WKWebViewController(url: url)
         navigationController?.pushViewController(vc, animated: true)
     }
     

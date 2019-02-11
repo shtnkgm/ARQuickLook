@@ -15,7 +15,7 @@
 		DA2D3AE520F627F6003E48CF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AE420F627F6003E48CF /* ListViewController.swift */; };
 		DA2D3AEA20F627F9003E48CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AE920F627F9003E48CF /* Assets.xcassets */; };
 		DA2D3AED20F627F9003E48CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AEB20F627F9003E48CF /* LaunchScreen.storyboard */; };
-		DA2D3B0020F62D7A003E48CF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */; };
+		DA2D3B0020F62D7A003E48CF /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AFF20F62D7A003E48CF /* WKWebViewController.swift */; };
 		DA2D3B0220F6312C003E48CF /* cupandsaucer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		DA2D3AEE20F627F9003E48CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionClosurable.framework; path = Carthage/Build/iOS/ActionClosurable.framework; sourceTree = "<group>"; };
 		DA2D3AF720F6292B003E48CF /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
-		DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DA2D3AFF20F62D7A003E48CF /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = cupandsaucer.usdz; sourceTree = "<group>"; };
 		DE68F24F73F7210B2C0AA135 /* Pods_ARQuickLook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARQuickLook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,7 +83,7 @@
 				DA2D3AE220F627F6003E48CF /* AppDelegate.swift */,
 				DA2D3AE420F627F6003E48CF /* ListViewController.swift */,
 				970FCF1622119AB8008866F4 /* ARNativeViewController.swift */,
-				DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */,
+				DA2D3AFF20F62D7A003E48CF /* WKWebViewController.swift */,
 				970FCF1A2211B943008866F4 /* SafariViewController.swift */,
 				970FCF1822119B9E008866F4 /* Former.swift */,
 				DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */,
@@ -235,7 +235,7 @@
 				970FCF1722119AB8008866F4 /* ARNativeViewController.swift in Sources */,
 				970FCF1922119B9E008866F4 /* Former.swift in Sources */,
 				DA2D3AE520F627F6003E48CF /* ListViewController.swift in Sources */,
-				DA2D3B0020F62D7A003E48CF /* WebViewController.swift in Sources */,
+				DA2D3B0020F62D7A003E48CF /* WKWebViewController.swift in Sources */,
 				970FCF1B2211B943008866F4 /* SafariViewController.swift in Sources */,
 				DA2D3AE320F627F6003E48CF /* AppDelegate.swift in Sources */,
 			);

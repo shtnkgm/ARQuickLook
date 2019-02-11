@@ -12,7 +12,7 @@ import SnapKit
 import Then
 import SVProgressHUD
 
-class WebViewController: UIViewController {
+class WKWebViewController: UIViewController {
     let url: URL
     private var titleObserver: NSKeyValueObservation?
     private var progressObserver: NSKeyValueObservation?
@@ -71,7 +71,7 @@ class WebViewController: UIViewController {
     }
 }
 
-extension WebViewController: WKNavigationDelegate {
+extension WKWebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         SVProgressHUD.showError(withStatus: "")
     }
