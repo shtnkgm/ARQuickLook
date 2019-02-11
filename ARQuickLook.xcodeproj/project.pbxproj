@@ -10,6 +10,7 @@
 		3B1D85ADFCCA0D08555FEADE /* Pods_ARQuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE68F24F73F7210B2C0AA135 /* Pods_ARQuickLook.framework */; };
 		970FCF1722119AB8008866F4 /* ARNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FCF1622119AB8008866F4 /* ARNativeViewController.swift */; };
 		970FCF1922119B9E008866F4 /* Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FCF1822119B9E008866F4 /* Former.swift */; };
+		970FCF1B2211B943008866F4 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FCF1A2211B943008866F4 /* SafariViewController.swift */; };
 		DA2D3AE320F627F6003E48CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AE220F627F6003E48CF /* AppDelegate.swift */; };
 		DA2D3AE520F627F6003E48CF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AE420F627F6003E48CF /* ListViewController.swift */; };
 		DA2D3AEA20F627F9003E48CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AE920F627F9003E48CF /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		31074EBB3C96A9D5CB1475B1 /* Pods-ARQuickLook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARQuickLook.release.xcconfig"; path = "Target Support Files/Pods-ARQuickLook/Pods-ARQuickLook.release.xcconfig"; sourceTree = "<group>"; };
 		970FCF1622119AB8008866F4 /* ARNativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNativeViewController.swift; sourceTree = "<group>"; };
 		970FCF1822119B9E008866F4 /* Former.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Former.swift; sourceTree = "<group>"; };
+		970FCF1A2211B943008866F4 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		DA2D3ADF20F627F6003E48CF /* ARQuickLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARQuickLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2D3AE220F627F6003E48CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2D3AE420F627F6003E48CF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				DA2D3AE420F627F6003E48CF /* ListViewController.swift */,
 				970FCF1622119AB8008866F4 /* ARNativeViewController.swift */,
 				DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */,
+				970FCF1A2211B943008866F4 /* SafariViewController.swift */,
 				970FCF1822119B9E008866F4 /* Former.swift */,
 				DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */,
 				DA2D3AE920F627F9003E48CF /* Assets.xcassets */,
@@ -233,6 +236,7 @@
 				970FCF1922119B9E008866F4 /* Former.swift in Sources */,
 				DA2D3AE520F627F6003E48CF /* ListViewController.swift in Sources */,
 				DA2D3B0020F62D7A003E48CF /* WebViewController.swift in Sources */,
+				970FCF1B2211B943008866F4 /* SafariViewController.swift in Sources */,
 				DA2D3AE320F627F6003E48CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

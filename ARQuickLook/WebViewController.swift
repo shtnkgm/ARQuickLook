@@ -41,6 +41,12 @@ class WebViewController: UIViewController {
         observeTitle()
         observeProgress()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        SVProgressHUD.dismiss()
+    }
+    
     func updateLayout() {
         view.addSubview(wkWebView)
         wkWebView.snp.makeConstraints {

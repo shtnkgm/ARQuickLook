@@ -51,6 +51,14 @@ class ListViewController: UIViewController {
             MyFormer.makeLabelRow(title: "Safari (usdz)") { [weak self] in
                 guard let self = self else { return }
                 self.openInSafari(url: self.usdzUrl)
+            },
+            MyFormer.makeLabelRow(title: "SafariViewController (Gallery)") { [weak self] in
+                guard let self = self else { return }
+                self.openInSafariVC(url: self.galleryUrl)
+            },
+            MyFormer.makeLabelRow(title: "SafariViewController (usdz)") { [weak self] in
+                guard let self = self else { return }
+                self.openInSafariVC(url: self.usdzUrl)
             }
             ])
         former.add(sectionFormers: [section])
@@ -100,5 +108,10 @@ class ListViewController: UIViewController {
     
     func openInSafari(url: URL) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    func openInSafariVC(url: URL) {
+        let vc = SafariViewController(url: url)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
