@@ -21,7 +21,7 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "ARKit Sample"
+        title = "USDZ Quick Look Sample"
         updateLayout()
         setUpFormer()
     }
