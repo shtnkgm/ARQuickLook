@@ -13,8 +13,9 @@ import SVProgressHUD
 import Alamofire
 
 class ListViewController: UIViewController {
-    private let galleryUrlString = "https://developer.apple.com/arkit/gallery/"
-    private let usdzUrlString = "https://developer.apple.com/arkit/gallery/models/teapot/teapot.usdz" //6.6MB
+    private let localUSDZURL = Bundle.main.url(forResource: "cupandsaucer", withExtension: "usdz")!
+    private let galleryUrl = URL(string: "https://developer.apple.com/arkit/gallery/")!
+    private let usdzUrl = URL(string: "https://developer.apple.com/arkit/gallery/models/teapot/teapot.usdz")! //6.6MB
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private lazy var former = Former(tableView: tableView)
     
@@ -28,19 +29,24 @@ class ListViewController: UIViewController {
     func setUpFormer() {
         let section = SectionFormer(rowFormers: [
             MyFormer.makeLabelRow(title: "Native (Local File)") { [weak self] in
-                self?.openInNativeWithLocalFile()
+                guard let self = self else { return }
+                self.openInNative(url: self.localUSDZURL)
             },
             MyFormer.makeLabelRow(title: "Native (Web File)") { [weak self] in
-                self?.openInNativeWithWebFile()
+                guard let self = self else { return }
+                self.openInNativeWithWebFile(url: self.usdzUrl)
             },
             MyFormer.makeLabelRow(title: "WebView (Gallery)") { [weak self] in
-                self?.openInWebViewForGallery()
+                guard let self = self else { return }
+                self.openInWebView(url: self.galleryUrl)
             },
             MyFormer.makeLabelRow(title: "WebView (usdz)") { [weak self] in
-                self?.openInWebViewForUSDZ()
+                guard let self = self else { return }
+                self.openInWebView(url: self.usdzUrl)
             },
             MyFormer.makeLabelRow(title: "Safari") { [weak self] in
-                self?.openInSafari()
+                guard let self = self else { return }
+                self.openInSafari(url: self.galleryUrl)
             }
             ])
         former.add(sectionFormers: [section])
@@ -53,12 +59,7 @@ class ListViewController: UIViewController {
         }
     }
     
-    func openInSafari() {
-        guard let url = URL(string: galleryUrlString) else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
-    
-    func openInNativeWithWebFile() {
+    func openInNativeWithWebFile(url: URL) {
         SVProgressHUD.show(withStatus: "Loading")
         let destination: DownloadRequest.DownloadFileDestination = { _, _ in
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -67,34 +68,33 @@ class ListViewController: UIViewController {
             return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
         }
         
-        Alamofire.download(usdzUrlString, to: destination).responseData { [weak self] response in
-            guard let url = response.destinationURL else {
-                SVProgressHUD.showError(withStatus: "Loading Failed")
-                return
+        Alamofire.download(url.absoluteString, to: destination)
+            .downloadProgress { progress in
+                SVProgressHUD.showProgress(Float(progress.fractionCompleted))
             }
-            SVProgressHUD.dismiss()
-            DispatchQueue.main.async {
-                let vc = ARNativeViewController(url: url)
-                self?.navigationController?.pushViewController(vc, animated: true)
-            }
+            .responseData { [weak self] response in
+                guard let url = response.destinationURL else {
+                    SVProgressHUD.showError(withStatus: "Loading Failed")
+                    return
+                }
+                SVProgressHUD.dismiss()
+                DispatchQueue.main.async {
+                    self?.openInNative(url: url)
+                }
         }
     }
     
-    func openInNativeWithLocalFile() {
-        guard let url = Bundle.main.url(forResource: "cupandsaucer", withExtension: "usdz") else { return }
+    func openInNative(url: URL) {
         let vc = ARNativeViewController(url: url)
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func openInWebViewForGallery() {
-        guard let url = URL(string: galleryUrlString) else { return }
+    func openInWebView(url: URL) {
         let vc = WebViewController(url: url)
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func openInWebViewForUSDZ() {
-        guard let url = URL(string: usdzUrlString) else { return }
-        let vc = WebViewController(url: url)
-        navigationController?.pushViewController(vc, animated: true)
+    func openInSafari(url: URL) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
