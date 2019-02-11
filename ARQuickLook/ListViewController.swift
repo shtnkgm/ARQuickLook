@@ -36,11 +36,11 @@ class ListViewController: UIViewController {
                 guard let self = self else { return }
                 self.openInNativeWithWebFile(url: self.usdzUrl)
             },
-            MyFormer.makeLabelRow(title: "WKWebView (Gallery)") { [weak self] in
+            MyFormer.makeLabelRow(title: "WKWebView (Gallery) not suppported") { [weak self] in
                 guard let self = self else { return }
                 self.openInWKWebView(url: self.galleryUrl)
             },
-            MyFormer.makeLabelRow(title: "WKWebView (usdz)") { [weak self] in
+            MyFormer.makeLabelRow(title: "WKWebView (usdz) not suppported") { [weak self] in
                 guard let self = self else { return }
                 self.openInWKWebView(url: self.usdzUrl)
             },
