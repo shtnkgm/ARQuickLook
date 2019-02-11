@@ -19,7 +19,10 @@ enum MyFormer {
     }
     
     static func makeLabelRow(title: String, onSelected: @escaping () -> Void) -> LabelRowFormer<FormLabelCell> {
-        return LabelRowFormer<FormLabelCell>()
+        return LabelRowFormer<FormLabelCell>() {
+                $0.selectionStyle = .none
+                $0.accessoryType = .disclosureIndicator
+            }
             .configure {
                 $0.text = title
                 $0.rowHeight = 60

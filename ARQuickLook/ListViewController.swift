@@ -44,9 +44,13 @@ class ListViewController: UIViewController {
                 guard let self = self else { return }
                 self.openInWebView(url: self.usdzUrl)
             },
-            MyFormer.makeLabelRow(title: "Safari") { [weak self] in
+            MyFormer.makeLabelRow(title: "Safari (Gallery)") { [weak self] in
                 guard let self = self else { return }
                 self.openInSafari(url: self.galleryUrl)
+            },
+            MyFormer.makeLabelRow(title: "Safari (usdz)") { [weak self] in
+                guard let self = self else { return }
+                self.openInSafari(url: self.usdzUrl)
             }
             ])
         former.add(sectionFormers: [section])
@@ -60,7 +64,7 @@ class ListViewController: UIViewController {
     }
     
     func openInNativeWithWebFile(url: URL) {
-        SVProgressHUD.show(withStatus: "Loading")
+        SVProgressHUD.showProgress(0)
         let destination: DownloadRequest.DownloadFileDestination = { _, _ in
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let fileURL = documentsURL.appendingPathComponent("teapot.usdz")

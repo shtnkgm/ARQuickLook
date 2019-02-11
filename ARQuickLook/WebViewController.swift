@@ -15,18 +15,19 @@ import SVProgressHUD
 class WebViewController: UIViewController {
     let url: URL
     private var titleObserver: NSKeyValueObservation?
-    private var isLoadingObserver: NSKeyValueObservation?
+    private var progressObserver: NSKeyValueObservation?
     
     lazy var wkWebView = WKWebView().then {
         let request = URLRequest(url: url)
         $0.load(request)
+        $0.navigationDelegate = self
     }
     
     init(url: URL) {
         self.url = url
         super.init(nibName: nil, bundle: nil)
         if wkWebView.isLoading {
-            SVProgressHUD.show(withStatus: "Loading")
+            SVProgressHUD.showProgress(0)
         }
     }
     
@@ -38,7 +39,7 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         updateLayout()
         observeTitle()
-        observeIsLoading()
+        observeProgress()
     }
     func updateLayout() {
         view.addSubview(wkWebView)
@@ -53,11 +54,24 @@ class WebViewController: UIViewController {
         }
     }
     
-    func observeIsLoading() {
-        isLoadingObserver = wkWebView.observe(\WKWebView.isLoading, options: .new) { _, change in
-            guard let isLoading = change.newValue else { return }
-            isLoading ? SVProgressHUD.show(withStatus: "Loading") : SVProgressHUD.dismiss()
+    func observeProgress() {
+        progressObserver = wkWebView.observe(\WKWebView.estimatedProgress, options: .new) { _, change in
+            guard let progress = change.newValue else { return }
+            SVProgressHUD.showProgress(Float(progress))
+            if progress == 1 {
+                SVProgressHUD.dismiss()
+            }
         }
+    }
+}
+
+extension WebViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        SVProgressHUD.showError(withStatus: "")
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        SVProgressHUD.showError(withStatus: "")
     }
 }
 
