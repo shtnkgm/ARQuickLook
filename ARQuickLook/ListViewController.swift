@@ -8,7 +8,6 @@
 
 import UIKit
 import SnapKit
-import QuickLook
 import Former
 
 class ListViewController: UIViewController {
