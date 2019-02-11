@@ -28,7 +28,8 @@ extension ARNativeViewController: QLPreviewControllerDataSource {
         return 1
     }
     
-    public func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {        
+    public func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+        // URL must be a file-type URL (local files only)
         return url as QLPreviewItem
     }
 }

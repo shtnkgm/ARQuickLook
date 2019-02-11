@@ -5,5 +5,6 @@ target 'ARQuickLook' do
   pod 'SnapKit'
   pod 'Former'
   pod 'Then'
-
+  pod 'Alamofire'
+  pod 'SVProgressHUD'
 end

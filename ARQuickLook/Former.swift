@@ -22,29 +22,9 @@ enum MyFormer {
         return LabelRowFormer<FormLabelCell>()
             .configure {
                 $0.text = title
+                $0.rowHeight = 60
             }.onSelected { _ in
                 onSelected()
-        }
-    }
-    
-    static func makeSwitchRow(title: String, isOn: Bool = false, onSwitchChanged: @escaping (_ isOn: Bool) -> Void) -> SwitchRowFormer<FormSwitchCell> {
-        return SwitchRowFormer<FormSwitchCell> {
-            $0.titleLabel.text = title
-            $0.switchButton.isOn = isOn
-            }.onSwitchChanged {
-                onSwitchChanged($0)
-        }
-    }
-    
-    static func makeSliderRow(title: String, min: Float = 0, max: Float = 1, value: Float? = nil, onValueChanged: @escaping (_ value: Float) -> Void) -> SliderRowFormer<FormSliderCell> {
-        return SliderRowFormer<FormSliderCell> {
-            $0.titleLabel.text = title
-            $0.slider.minimumValue = min
-            $0.slider.maximumValue = max
-            }.configure {
-                $0.value = value ?? ((min + max) / 2.0)
-            }.onValueChanged {
-                onValueChanged($0)
         }
     }
 }
