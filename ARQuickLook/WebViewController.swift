@@ -7,24 +7,35 @@
 //
 
 import UIKit
-import PureLayout
 import WebKit
+import SnapKit
+import Then
 
 class WebViewController: UIViewController {
-    let urlString = "https://developer.apple.com/arkit/gallery/"
+    private let urlString = "https://developer.apple.com/arkit/gallery/"
+    private var titleObserver: NSKeyValueObservation?
     
-    lazy var wkWebView: WKWebView = {
-        let wkWebView = WKWebView()
+    lazy var wkWebView = WKWebView().then {
         let request = URLRequest(url: URL(string: urlString)!)
-        wkWebView.load(request)
-        return wkWebView
-    }()
+        $0.load(request)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateLayout()
+        observeTitle()
+    }
+    func updateLayout() {
         view.addSubview(wkWebView)
-        wkWebView.autoPinEdgesToSuperviewEdges()
+        wkWebView.snp.makeConstraints {
+            $0.edges .equalToSuperview()
+        }
+    }
+    
+    func observeTitle() {
+        titleObserver = wkWebView.observe(\WKWebView.title, options: .new) { [weak self] _, change in
+            self?.title = change.newValue as? String
+        }
     }
 }
 

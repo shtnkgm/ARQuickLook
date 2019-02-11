@@ -7,39 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1D85ADFCCA0D08555FEADE /* Pods_ARQuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE68F24F73F7210B2C0AA135 /* Pods_ARQuickLook.framework */; };
+		970FCF1722119AB8008866F4 /* ARNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FCF1622119AB8008866F4 /* ARNativeViewController.swift */; };
+		970FCF1922119B9E008866F4 /* Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FCF1822119B9E008866F4 /* Former.swift */; };
 		DA2D3AE320F627F6003E48CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AE220F627F6003E48CF /* AppDelegate.swift */; };
-		DA2D3AE520F627F6003E48CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AE420F627F6003E48CF /* ViewController.swift */; };
-		DA2D3AE820F627F6003E48CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AE620F627F6003E48CF /* Main.storyboard */; };
+		DA2D3AE520F627F6003E48CF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AE420F627F6003E48CF /* ListViewController.swift */; };
 		DA2D3AEA20F627F9003E48CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AE920F627F9003E48CF /* Assets.xcassets */; };
 		DA2D3AED20F627F9003E48CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3AEB20F627F9003E48CF /* LaunchScreen.storyboard */; };
-		DA2D3AFA20F6294E003E48CF /* ActionClosurable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */; };
-		DA2D3AFB20F6294E003E48CF /* ActionClosurable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DA2D3AFC20F6294E003E48CF /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF720F6292B003E48CF /* PureLayout.framework */; };
-		DA2D3AFD20F6294E003E48CF /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3AF720F6292B003E48CF /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA2D3B0020F62D7A003E48CF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */; };
 		DA2D3B0220F6312C003E48CF /* cupandsaucer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		DA2D3AFE20F6294F003E48CF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DA2D3AFD20F6294E003E48CF /* PureLayout.framework in Embed Frameworks */,
-				DA2D3AFB20F6294E003E48CF /* ActionClosurable.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		2A0E9964E749115144EA7098 /* Pods-ARQuickLook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARQuickLook.debug.xcconfig"; path = "Target Support Files/Pods-ARQuickLook/Pods-ARQuickLook.debug.xcconfig"; sourceTree = "<group>"; };
+		31074EBB3C96A9D5CB1475B1 /* Pods-ARQuickLook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARQuickLook.release.xcconfig"; path = "Target Support Files/Pods-ARQuickLook/Pods-ARQuickLook.release.xcconfig"; sourceTree = "<group>"; };
+		970FCF1622119AB8008866F4 /* ARNativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNativeViewController.swift; sourceTree = "<group>"; };
+		970FCF1822119B9E008866F4 /* Former.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Former.swift; sourceTree = "<group>"; };
 		DA2D3ADF20F627F6003E48CF /* ARQuickLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARQuickLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2D3AE220F627F6003E48CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA2D3AE420F627F6003E48CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA2D3AE720F627F6003E48CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA2D3AE420F627F6003E48CF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DA2D3AE920F627F9003E48CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA2D3AEC20F627F9003E48CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA2D3AEE20F627F9003E48CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +33,7 @@
 		DA2D3AF720F6292B003E48CF /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
 		DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = cupandsaucer.usdz; sourceTree = "<group>"; };
+		DE68F24F73F7210B2C0AA135 /* Pods_ARQuickLook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARQuickLook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,20 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2D3AFC20F6294E003E48CF /* PureLayout.framework in Frameworks */,
-				DA2D3AFA20F6294E003E48CF /* ActionClosurable.framework in Frameworks */,
+				3B1D85ADFCCA0D08555FEADE /* Pods_ARQuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A03843AC01B22674952DFD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A0E9964E749115144EA7098 /* Pods-ARQuickLook.debug.xcconfig */,
+				31074EBB3C96A9D5CB1475B1 /* Pods-ARQuickLook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DA2D3AD620F627F6003E48CF = {
 			isa = PBXGroup;
 			children = (
 				DA2D3AE120F627F6003E48CF /* ARQuickLook */,
 				DA2D3AE020F627F6003E48CF /* Products */,
 				DA2D3AF520F6292B003E48CF /* Frameworks */,
+				7A03843AC01B22674952DFD4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				DA2D3AE220F627F6003E48CF /* AppDelegate.swift */,
-				DA2D3AE420F627F6003E48CF /* ViewController.swift */,
+				DA2D3AE420F627F6003E48CF /* ListViewController.swift */,
+				970FCF1622119AB8008866F4 /* ARNativeViewController.swift */,
 				DA2D3AFF20F62D7A003E48CF /* WebViewController.swift */,
+				970FCF1822119B9E008866F4 /* Former.swift */,
 				DA2D3B0120F630CE003E48CF /* cupandsaucer.usdz */,
-				DA2D3AE620F627F6003E48CF /* Main.storyboard */,
 				DA2D3AE920F627F9003E48CF /* Assets.xcassets */,
 				DA2D3AEB20F627F9003E48CF /* LaunchScreen.storyboard */,
 				DA2D3AEE20F627F9003E48CF /* Info.plist */,
@@ -99,6 +96,7 @@
 			children = (
 				DA2D3AF620F6292B003E48CF /* ActionClosurable.framework */,
 				DA2D3AF720F6292B003E48CF /* PureLayout.framework */,
+				DE68F24F73F7210B2C0AA135 /* Pods_ARQuickLook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,11 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA2D3AF120F627F9003E48CF /* Build configuration list for PBXNativeTarget "ARQuickLook" */;
 			buildPhases = (
+				7D85A64A23417B3C83CCF425 /* [CP] Check Pods Manifest.lock */,
 				DA2D3ADB20F627F6003E48CF /* Sources */,
 				DA2D3ADC20F627F6003E48CF /* Frameworks */,
 				DA2D3ADD20F627F6003E48CF /* Resources */,
-				DA2D3AF420F628CE003E48CF /* Carthage */,
-				DA2D3AFE20F6294F003E48CF /* Embed Frameworks */,
+				DC97AC09A5FF3CBF836CFFDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,7 +163,6 @@
 			files = (
 				DA2D3AED20F627F9003E48CF /* LaunchScreen.storyboard in Resources */,
 				DA2D3AEA20F627F9003E48CF /* Assets.xcassets in Resources */,
-				DA2D3AE820F627F6003E48CF /* Main.storyboard in Resources */,
 				DA2D3B0220F6312C003E48CF /* cupandsaucer.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,25 +170,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		DA2D3AF420F628CE003E48CF /* Carthage */ = {
+		7D85A64A23417B3C83CCF425 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/PureLayout.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ActionClosurable.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = Carthage;
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARQuickLook-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC97AC09A5FF3CBF836CFFDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARQuickLook/Pods-ARQuickLook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Former/Former.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Former.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARQuickLook/Pods-ARQuickLook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -200,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2D3AE520F627F6003E48CF /* ViewController.swift in Sources */,
+				970FCF1722119AB8008866F4 /* ARNativeViewController.swift in Sources */,
+				970FCF1922119B9E008866F4 /* Former.swift in Sources */,
+				DA2D3AE520F627F6003E48CF /* ListViewController.swift in Sources */,
 				DA2D3B0020F62D7A003E48CF /* WebViewController.swift in Sources */,
 				DA2D3AE320F627F6003E48CF /* AppDelegate.swift in Sources */,
 			);
@@ -209,14 +236,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA2D3AE620F627F6003E48CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA2D3AE720F627F6003E48CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA2D3AEB20F627F9003E48CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -344,6 +363,7 @@
 		};
 		DA2D3AF220F627F9003E48CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A0E9964E749115144EA7098 /* Pods-ARQuickLook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +386,7 @@
 		};
 		DA2D3AF320F627F9003E48CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31074EBB3C96A9D5CB1475B1 /* Pods-ARQuickLook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
